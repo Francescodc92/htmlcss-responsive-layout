@@ -28,8 +28,10 @@ ul {
 
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
+.button,
 button {
   border: 0;
   background-color: transparent;
@@ -44,38 +46,48 @@ button.hamburger {
   color: #fff;
 }
 
-button.primary {
+.button.primary {
   border-radius: 2rem;
   background-color: var(--bg-primary);
 }
-button.primary:hover {
+.button.primary:hover {
   background-color: var(--bg-primary-hover);
 }
 
-button.secondary {
+.button.secondary {
   color: #fff;
   border-radius: 2rem;
   background-color: var(--bg-secondary-light);
 }
-button.secondary:hover {
+.button.secondary:hover {
   background-color: var(--bg-secondary);
 }
 
-button.tertiary {
+.button.tertiary {
   color: var(--bg-secondary-light);
   background-color: #fff;
   border-radius: 2rem;
 }
 
-button.tertiary:hover {
+.button.tertiary:hover {
   color: #fff;
   background-color: var(--bg-secondary);
   border-radius: 2rem;
 }
 
-button.rounded {
+.button.rounded {
   border-radius: 50%;
 }
+
+.button.tertiary.header {
+  color: #000;
+}
+
+.button.tertiary.header:hover {
+  color: #fff;
+  background-color: var(--bg-primary-hover);
+}
+
 section {
   padding-block: var(--section-padding);
   margin-block: 1rem;
