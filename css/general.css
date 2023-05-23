@@ -62,7 +62,10 @@ button.secondary:hover {
 button.rounded {
   border-radius: 50%;
 }
-
+section {
+  padding-block: var(--section-padding);
+  margin-block: 1rem;
+}
 .my-row {
   display: flex;
   flex-wrap: wrap;

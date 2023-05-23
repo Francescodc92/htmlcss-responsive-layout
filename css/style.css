@@ -37,9 +37,6 @@ header .header-content {
 Main
 ------------*/
 /*-----section cards-----*/
-section#cards {
-  padding-block: var(--section-padding);
-}
 
 .my-row .card {
   margin-block: var(--margin-col);
@@ -49,31 +46,49 @@ section#cards {
 /*-----section plans-----*/
 section#plans {
   background-color: var(--bg-secondary-light);
-  padding-block: var(--section-padding);
 }
 section#plans .my-row .col-full > * {
   margin-block: var(--margin-col);
   padding: var(--padding-card);
-  background-color: var(--primary-color-light);
 }
 
 section#plans .my-row .col-full .right {
   background-color: #fff;
   border-radius: 2rem;
 }
-
+/*-----section textimonials-----*/
+section#testimonials .my-row .col.col-mobile > * {
+  margin-block: var(--margin-col);
+  padding: var(--padding-card);
+  background-color: var(--bg-secondary-light);
+  text-align: center;
+  color: #fff;
+}
 /*--------------
 Responsive
 ----------------*/
 /*-------Tablet-------*/
 @media screen and (min-width: 768px) {
   /*----main cols section----*/
-  .my-row .col {
+  section#cards .my-row .col {
     width: calc((100% / 3) - (2 * var(--margin-col)));
   }
 
-  .my-row .col:first-child {
+  section#cards .my-row .col:first-child {
     width: calc(((100% / 3) * 2) - (2 * var(--margin-col)));
+  }
+  /*--------section testimonials------------*/
+  section#testimonials .my-row .col.col-mobile .card {
+    display: flex;
+  }
+
+  section#testimonials .my-row .col.col-mobile .card .left {
+    width: 20%;
+    text-align: left;
+  }
+  section#testimonials .my-row .col.col-mobile .card .right {
+    width: 80%;
+    text-align: left;
   }
 }
 
@@ -86,14 +101,14 @@ Responsive
   .header-content .hamburger-container {
     display: none;
   }
-  /*-------main cols section-------*/
-  .my-row .col:first-child .card {
+  /*-------main card section-------*/
+  section#cards .my-row .col:first-child .card {
     display: flex;
   }
-  .my-row .col:first-child .card > * {
+  section#cards .my-row .col:first-child .card > * {
     width: calc(100% / 2);
   }
-  .my-row .col:first-child .card .right {
+  section#cards .my-row .col:first-child .card .right {
     align-self: flex-end;
   }
   /*-------main plans section-------*/
