@@ -33,19 +33,49 @@ header .header-content {
   margin-left: 1rem;
 }
 
+/*-----------
+Main
+------------*/
+section#cards {
+  padding-block: var(--section-padding);
+}
+
+.my-row .card {
+  margin-block: var(--margin-col);
+}
+
 /*--------------
 Responsive
 ----------------*/
 /*-------Tablet-------*/
 @media screen and (min-width: 768px) {
+  /*----main cols section----*/
+  .my-row .col {
+    width: calc((100% / 3) - (2 * var(--margin-col)));
+  }
+
+  .my-row .col:first-child {
+    width: calc(((100% / 3) * 2) - (2 * var(--margin-col)));
+  }
 }
 
 /*-------Desktop-------*/
 @media screen and (min-width: 992px) {
+  /*------Header--------*/
   .header-content .navigation {
     display: block;
   }
   .header-content .hamburger-container {
     display: none;
+  }
+  /*-------main cols section-------*/
+  .my-row .col:first-child .card {
+    display: flex;
+  }
+  .my-row .col:first-child .card > * {
+    width: calc(100% / 2);
+  }
+  .my-row .col:first-child .card .right {
+    align-self: flex-end;
   }
 }

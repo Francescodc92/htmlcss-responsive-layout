@@ -1,6 +1,7 @@
 :root {
   --margin-col: 1rem;
   --primary-color: #0084fd;
+  --section-padding: 3rem;
 }
 
 .container {

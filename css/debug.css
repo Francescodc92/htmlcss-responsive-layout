@@ -6,8 +6,7 @@
   border: 1px solid yellow;
 }
 
-.debug .col-mobile {
-  border: 1px solid red;
+.debug .col-mobile .card {
   height: 500px;
   background-color: aqua;
 }
