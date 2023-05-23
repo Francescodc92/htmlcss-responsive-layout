@@ -1,0 +1,17 @@
+.debug .container {
+  border: 1px solid green;
+}
+
+.debug .my-row {
+  border: 1px solid yellow;
+}
+
+.debug .col-mobile {
+  border: 1px solid red;
+  height: 500px;
+  background-color: aqua;
+}
+
+.debug .header-content > * {
+  border: 1px solid blue;
+}

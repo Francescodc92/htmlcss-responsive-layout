@@ -1,2 +1,51 @@
 @import url(./reset.css);
 @import url(./general.css);
+/*----------debug css da eliminare----------*/
+@import url(./debug.css);
+
+/*------------
+Header
+-------------*/
+header {
+  background-color: var(--primary-color);
+}
+header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.header-content .navigation {
+  display: none;
+}
+
+.header-content .navigation ul {
+  display: flex;
+}
+
+.header-content .navigation ul li a {
+  color: #fff;
+  padding: 1rem;
+}
+
+.header-content .navigation ul li + li {
+  margin-left: 1rem;
+}
+
+/*--------------
+Responsive
+----------------*/
+/*-------Tablet-------*/
+@media screen and (min-width: 768px) {
+}
+
+/*-------Desktop-------*/
+@media screen and (min-width: 992px) {
+  .header-content .navigation {
+    display: block;
+  }
+  .header-content .hamburger-container {
+    display: none;
+  }
+}

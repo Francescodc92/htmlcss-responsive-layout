@@ -1,0 +1,42 @@
+:root {
+  --margin-col: 1rem;
+  --primary-color: #0084fd;
+}
+
+.container {
+  max-width: 120rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+button.hamburger {
+  padding: 1rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.my-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: calc(-1 * var(--margin-col));
+}
+
+.col-mobile {
+  width: calc(100% - (2 * var(--margin-col)));
+  margin-inline: 1rem;
+}
