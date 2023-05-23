@@ -1,11 +1,22 @@
 :root {
   --margin-col: 1rem;
-  --primary-color: #0084fd;
+  --bg-primary: #0084fd;
+  --bg-primary-hover: #0675dd;
+  --bg-primary-light: #b5ddff;
+  --bg-secondary: #8c87d3;
+  --bg-secondary-light: #9792e4;
   --section-padding: 3rem;
+  --padding-card: 2rem;
 }
 
 .container {
   max-width: 120rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+.container-small {
+  max-width: 100rem;
   margin-inline: auto;
   padding-inline: 2rem;
 }
@@ -23,12 +34,33 @@ button {
   background-color: transparent;
   padding: 1rem 1.5rem;
   cursor: pointer;
+  transition: background-color 200ms ease-in-out;
 }
 
 button.hamburger {
   padding: 1rem;
   font-size: 2rem;
   color: #fff;
+}
+
+button.primary {
+  border-radius: 2rem;
+  background-color: var(--bg-primary);
+}
+button.primary:hover {
+  background-color: var(--bg-primary-hover);
+}
+
+button.secondary {
+  border-radius: 2rem;
+  background-color: var(--bg-secondary-light);
+}
+button.secondary:hover {
+  background-color: var(--bg-secondary);
+}
+
+button.rounded {
+  border-radius: 50%;
 }
 
 .my-row {

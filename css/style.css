@@ -7,7 +7,7 @@
 Header
 -------------*/
 header {
-  background-color: var(--primary-color);
+  background-color: var(--bg-primary);
 }
 header .header-content {
   display: flex;
@@ -36,12 +36,30 @@ header .header-content {
 /*-----------
 Main
 ------------*/
+/*-----section cards-----*/
 section#cards {
   padding-block: var(--section-padding);
 }
 
 .my-row .card {
   margin-block: var(--margin-col);
+  padding: var(--padding-card);
+  background-color: var(--bg-primary-light);
+}
+/*-----section plans-----*/
+section#plans {
+  background-color: var(--bg-secondary-light);
+  padding-block: var(--section-padding);
+}
+section#plans .my-row .col-full > * {
+  margin-block: var(--margin-col);
+  padding: var(--padding-card);
+  background-color: var(--primary-color-light);
+}
+
+section#plans .my-row .col-full .right {
+  background-color: #fff;
+  border-radius: 2rem;
 }
 
 /*--------------
@@ -76,6 +94,17 @@ Responsive
     width: calc(100% / 2);
   }
   .my-row .col:first-child .card .right {
+    align-self: flex-end;
+  }
+  /*-------main plans section-------*/
+  section#plans .my-row .col-full {
+    display: flex;
+  }
+  section#plans .my-row .col-full > * {
+    width: calc(100% / 2);
+  }
+
+  section#plans .my-row .col-full .right {
     align-self: flex-end;
   }
 }

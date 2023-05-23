@@ -6,11 +6,14 @@
   border: 1px solid yellow;
 }
 
-.debug .col-mobile .card {
+.debug .col-mobile > * {
   height: 500px;
-  background-color: aqua;
 }
 
 .debug .header-content > * {
   border: 1px solid blue;
+}
+
+section#plans .my-row .col-full .right {
+  height: 300px;
 }
