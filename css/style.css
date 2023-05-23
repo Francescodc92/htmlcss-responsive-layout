@@ -74,6 +74,46 @@ section#benefits .my-row .card {
   padding: var(--padding-card);
   background-color: #fff;
 }
+
+/*-----section benefits-----*/
+section#about-us .my-row .col-full > * {
+  margin-block: var(--margin-col);
+  padding: var(--padding-card);
+}
+
+/*-----------
+Footer
+-------------*/
+footer {
+  margin-top: 1rem;
+}
+.footer-top {
+  background-color: var(--bg-secondary-light);
+}
+
+.footer-bottom {
+  background-color: var(--bg-footer);
+}
+
+.footer-top,
+.footer-bottom {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.footer-top .text {
+  padding: var(--section-padding);
+  max-width: 60rem;
+}
+
+.footer-bottom .text {
+  padding: var(--section-padding);
+  max-width: 40rem;
+}
+
 /*--------------
 Responsive
 ----------------*/
@@ -103,6 +143,15 @@ Responsive
   /*--------section benefits------------*/
   section#benefits .my-row .col {
     width: calc((100% / 2) - (2 * var(--margin-col)));
+  }
+
+  /*--------------section about us-------------------*/
+  section#about-us .my-row .col-full {
+    display: flex;
+  }
+  section#about-us .my-row .col-full > * {
+    width: calc((100% / 2) - (var(--margin-col) * 2));
+    margin-inline: var(--margin-col);
   }
 }
 
