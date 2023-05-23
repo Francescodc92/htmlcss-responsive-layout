@@ -52,6 +52,7 @@ button.primary:hover {
 }
 
 button.secondary {
+  color: #fff;
   border-radius: 2rem;
   background-color: var(--bg-secondary-light);
 }

@@ -38,7 +38,7 @@ Main
 ------------*/
 /*-----section cards-----*/
 
-.my-row .card {
+section#cards .my-row .card {
   margin-block: var(--margin-col);
   padding: var(--padding-card);
   background-color: var(--bg-primary-light);
@@ -63,6 +63,16 @@ section#testimonials .my-row .col.col-mobile > * {
   background-color: var(--bg-secondary-light);
   text-align: center;
   color: #fff;
+}
+
+/*-----section benefits-----*/
+section#benefits {
+  background-color: var(--bg-secondary-light);
+}
+section#benefits .my-row .card {
+  margin-block: var(--margin-col);
+  padding: var(--padding-card);
+  background-color: #fff;
 }
 /*--------------
 Responsive
@@ -89,6 +99,10 @@ Responsive
   section#testimonials .my-row .col.col-mobile .card .right {
     width: 80%;
     text-align: left;
+  }
+  /*--------section benefits------------*/
+  section#benefits .my-row .col {
+    width: calc((100% / 2) - (2 * var(--margin-col)));
   }
 }
 
@@ -121,5 +135,9 @@ Responsive
 
   section#plans .my-row .col-full .right {
     align-self: flex-end;
+  }
+  /*------------main benefits section---------------*/
+  section#benefits .my-row .col {
+    width: calc((100% / 3) - (2 * var(--margin-col)));
   }
 }
