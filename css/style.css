@@ -367,11 +367,87 @@ footer {
 .footer-top .text {
   padding: var(--section-padding);
   max-width: 60rem;
+  line-height: 150%;
+}
+
+.footer-top .text h4 {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-block: 2rem;
+}
+
+.footer-top .text h2 {
+  text-transform: capitalize;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  line-height: 150%;
+}
+
+.footer-top .text h3 {
+  text-transform: capitalize;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  color: #fdc15f;
+  padding-block: 2rem;
+}
+
+.footer-top .text p {
+  font-size: 1.5rem;
+  margin-block: 2rem;
+}
+
+.footer-top .text a {
+  font-weight: 700;
+  display: block;
+  max-width: 30rem;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.footer-top .text span.copyright {
+  font-size: 1.4rem;
+}
+
+.footer-top .text span.copyright span::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-inline: 0.5rem;
+}
+
+.footer-top .text span.copyright span::after {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-inline: 0.5rem;
+}
+
+.footer-top .text span.copyright a {
+  color: #fff;
+  display: inline-block;
 }
 
 .footer-bottom .text {
   padding: var(--section-padding);
   max-width: 40rem;
+}
+.footer-bottom .text p {
+  font-size: 1.4rem;
+}
+
+.footer-bottom .text p:first-of-type {
+  margin-bottom: 5rem;
+}
+
+.footer-bottom .text p:last-of-type a {
+  color: var(--bg-secondary-light);
 }
 
 /*--------------
@@ -452,6 +528,12 @@ Responsive
   section#about-us .my-row .col-full > * {
     width: calc(40% - (var(--margin-col) * 2));
     margin-inline: var(--margin-col);
+  }
+
+  /*---------footer----------*/
+  .footer-top .text a {
+    padding-block: 2rem;
+    border-radius: 3rem;
   }
 }
 
