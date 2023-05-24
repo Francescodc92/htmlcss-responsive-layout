@@ -291,6 +291,54 @@ section#benefits .my-row .card a {
 section#about-us .my-row .col-full > * {
   margin-block: var(--margin-col);
   padding: var(--padding-card);
+  line-height: 150%;
+}
+
+section#about-us .my-row .col-full h2 {
+  font-size: 4rem;
+  color: var(--bg-secondary-light);
+  margin-block: 2.5rem;
+}
+
+section#about-us .my-row .col-full p:first-of-type {
+  margin-bottom: 2rem;
+}
+
+section#about-us .my-row .col-full .about-img .img-wrapper {
+  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+}
+
+section#about-us .my-row .col-full .about-img .img-wrapper::after {
+  content: "\f10d";
+  font-family: "FontAwesome";
+  font-size: 8rem;
+  display: block;
+  color: var(--bg-secondary-light);
+  position: absolute;
+  right: -1rem;
+  top: 1rem;
+}
+
+section#about-us .my-row .col-full .about-img .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+section#about-us .my-row .col-full .about-img p {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--bg-secondary-light);
+  line-height: 150%;
+}
+
+section#about-us .my-row .col-full .about-img a i {
+  margin-right: 0.5rem;
 }
 
 /*-----------
@@ -397,8 +445,12 @@ Responsive
   section#about-us .my-row .col-full {
     display: flex;
   }
+  section#about-us .my-row .col-full .about-text {
+    width: calc(60% - (var(--margin-col) * 2));
+    margin-inline: var(--margin-col);
+  }
   section#about-us .my-row .col-full > * {
-    width: calc((100% / 2) - (var(--margin-col) * 2));
+    width: calc(40% - (var(--margin-col) * 2));
     margin-inline: var(--margin-col);
   }
 }
@@ -453,5 +505,15 @@ Responsive
   /*------------main benefits section---------------*/
   section#benefits .my-row .col {
     width: calc((100% / 3) - (2 * var(--margin-col)));
+  }
+
+  /*----section about us----*/
+  section#about-us .my-row .col-full .about-text {
+    width: calc(70% - (var(--margin-col) * 2));
+    margin-inline: var(--margin-col);
+  }
+  section#about-us .my-row .col-full > * {
+    width: calc(30% - (var(--margin-col) * 2));
+    margin-inline: var(--margin-col);
   }
 }
