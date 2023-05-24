@@ -38,16 +38,66 @@ header .header-content {
 Main
 ------------*/
 /*-----section cards-----*/
-
 section#cards .my-row .card {
   margin-block: var(--margin-col);
-  padding: var(--padding-card);
+  padding: var(--padding-card) var(--padding-card) 0;
   background-color: var(--bg-primary-light);
+  border-radius: 2rem;
 }
+
+section#cards .my-row .col:not(:nth-of-type(1)) .card {
+  text-align: center;
+  padding: 2rem 2.5rem;
+}
+
+section#cards .my-row .card h3 {
+  color: var(--bg-primary);
+  margin-block: 1rem;
+  font-size: 2.4rem;
+}
+
+section#cards .my-row .col:not(:nth-of-type(1)) .card h3 {
+  text-transform: capitalize;
+}
+
+section#cards .my-row .col:not(:nth-of-type(1)) .card i {
+  font-size: 6rem;
+  margin-block: 2rem;
+  color: var(--bg-primary);
+}
+
+section#cards .my-row .card p {
+  color: #5a6e7f;
+  line-height: 130%;
+  font-weight: 600;
+}
+
+section#cards .my-row .card a {
+  width: 60%;
+  max-width: 30rem;
+  text-align: center;
+  color: #fff;
+  text-transform: capitalize;
+  margin-block: 3rem;
+  display: block;
+}
+
+section#cards .my-row .card a i {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+}
+
+section#cards .my-row .card .right img {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+  max-width: 20rem;
+}
+
 /*-----section plans-----*/
 section#plans {
   background-color: var(--bg-secondary-light);
 }
+
 section#plans .my-row .col-full > * {
   margin-block: var(--margin-col);
   padding: var(--padding-card);
@@ -128,6 +178,21 @@ Responsive
   section#cards .my-row .col:first-child {
     width: calc(((100% / 3) * 2) - (2 * var(--margin-col)));
   }
+
+  section#cards .my-row .col:not(:nth-of-type(1)) .card {
+    height: calc(100% - (var(--margin-col) * 2));
+    text-align: center;
+    padding: 2rem 2.5rem;
+  }
+  section#cards .my-row .col:not(:nth-of-type(1)) .card p {
+    text-align: center;
+    padding-inline: 0;
+  }
+
+  section#cards .my-row .card p {
+    padding-right: 3rem;
+  }
+
   /*--------section testimonials------------*/
   section#testimonials .my-row .col.col-mobile .card {
     display: flex;
@@ -168,12 +233,15 @@ Responsive
   /*-------main card section-------*/
   section#cards .my-row .col:first-child .card {
     display: flex;
+    height: calc(100% - (var(--margin-col) * 2));
   }
   section#cards .my-row .col:first-child .card > * {
     width: calc(100% / 2);
   }
+
   section#cards .my-row .col:first-child .card .right {
     align-self: flex-end;
+    padding-left: 3rem;
   }
   /*-------main plans section-------*/
   section#plans .my-row .col-full {
