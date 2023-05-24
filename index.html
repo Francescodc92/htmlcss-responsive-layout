@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Demo application</title>
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!--css-->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -12,30 +20,36 @@
     <header>
       <div class="container">
         <div class="header-content">
-          <div class="logo-container">Logo</div>
+          <div class="logo-container">
+            <img src="./img/logo.png" alt="logo impresa" />
+          </div>
           <!--end header logo-->
           <nav class="navigation">
             <ul>
               <li>
-                <a href="#">link</a>
+                <a href="#cards">Planning</a>
               </li>
               <li>
-                <a href="#">link</a>
+                <a href="#testimonials">testimonials</a>
               </li>
               <li>
-                <a href="#">link</a>
+                <a href="#benefits">features</a>
               </li>
               <li>
-                <a href="#">link</a>
+                <a href="#about-us">about Us</a>
               </li>
               <li>
-                <a class="button tertiary header" href="#">link</a>
+                <a class="button tertiary header" href="#get-started"
+                  >get started</a
+                >
               </li>
             </ul>
           </nav>
           <!--end header  navigation-->
           <div class="hamburger-container">
-            <button class="hamburger">x</button>
+            <button class="hamburger">
+              <i class="fa-solid fa-bars"></i>
+            </button>
           </div>
           <!--end hamburger container-->
         </div>
@@ -223,15 +237,19 @@
       <!--end section about us-->
     </main>
     <!--end main-->
-    <footer>
+    <footer id="get-started">
       <div class="footer-top">
         <div class="text">
           <a href="#" target="_blank" class="button tertiary">testo</a>
         </div>
       </div>
+      <!--end footer top-->
+
       <div class="footer-bottom">
         <div class="text"></div>
       </div>
+      <!--end footer top-->
     </footer>
+    <!--end footer-->
   </body>
 </html>

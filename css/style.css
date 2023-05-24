@@ -27,6 +27,7 @@ header .header-content {
 .header-content .navigation ul li a {
   color: #fff;
   padding: 1rem;
+  text-transform: capitalize;
 }
 
 .header-content .navigation ul li + li {
@@ -75,7 +76,7 @@ section#benefits .my-row .card {
   background-color: #fff;
 }
 
-/*-----section benefits-----*/
+/*-----section about us-----*/
 section#about-us .my-row .col-full > * {
   margin-block: var(--margin-col);
   padding: var(--padding-card);
