@@ -230,30 +230,21 @@ section#testimonials .my-row .col.col-mobile .right p {
   margin-bottom: 2rem;
 }
 
-section#testimonials .my-row .col.col-mobile .right p span {
-  position: relative;
-}
-
 section#testimonials .my-row .col.col-mobile .right p span::before {
   content: "\f10d";
   font-family: "FontAwesome";
   font-size: 1.8rem;
-  display: block;
+  display: inline-block;
   color: #fff;
-  position: absolute;
-  top: -1rem;
-  left: -2rem;
 }
 
 section#testimonials .my-row .col.col-mobile .right p span::after {
   content: "\f10d";
   font-family: "FontAwesome";
   font-size: 1.8rem;
-  display: block;
+  display: inline-block;
   color: #fff;
-  position: absolute;
-  bottom: 0;
-  right: -2rem;
+
   transform: rotate(180deg);
 }
 
