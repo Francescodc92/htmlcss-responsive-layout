@@ -19,10 +19,6 @@ header .header-content {
   padding-block: 1rem;
 }
 
-.header-content .navigation {
-  display: none;
-}
-
 .header-content .navigation ul {
   display: flex;
 }
@@ -34,24 +30,29 @@ header .header-content {
   position: relative;
 }
 
-.header-content .navigation ul li:not(:last-of-type) a::after {
-  content: "";
-  width: 100%;
-  height: 0.2rem;
-  background-color: #fff;
-  position: absolute;
-  opacity: 0;
-  bottom: -1rem;
-  left: 0;
-  transition: opacity 200ms ease-in-out, bottom 200ms ease-in-out;
+header .header-content {
+  align-items: flex-start;
 }
-.header-content .navigation ul li:hover a::after {
-  opacity: 1;
-  bottom: 0;
+.header-content nav.navigation ul {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 200ms ease-in-out, opacity 200ms ease-in-out;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+.header-content nav.navigation ul li {
+  margin-top: 2rem;
 }
 
-.header-content .navigation ul li + li {
-  margin-left: 1rem;
+header .header-content:hover nav.navigation ul {
+  opacity: 1;
+  min-height: 100%;
+  max-height: 30rem;
+}
+
+header .header-content nav.navigation ul li + li {
+  margin-left: 0;
 }
 
 /*-----------
@@ -551,11 +552,47 @@ Responsive
 /*-------Desktop-------*/
 @media screen and (min-width: 992px) {
   /*------Header--------*/
-  .header-content .navigation {
-    display: block;
+
+  header .header-content .navigation ul {
+    flex-direction: row;
   }
-  .header-content .hamburger-container {
+
+  header .header-content .hamburger-container {
     display: none;
+  }
+
+  header .header-content nav.navigation ul {
+    margin-top: 0;
+    opacity: 1;
+    max-height: none;
+    min-height: none;
+    overflow: visible;
+  }
+
+  .header-content .navigation ul li a {
+    color: #fff;
+    padding: 1rem;
+    text-transform: capitalize;
+    position: relative;
+  }
+  .header-content .navigation ul li:not(:last-of-type) a::after {
+    content: "";
+    width: 100%;
+    height: 0.2rem;
+    background-color: #fff;
+    position: absolute;
+    opacity: 0;
+    bottom: -1rem;
+    left: 0;
+    transition: opacity 200ms ease-in-out, bottom 200ms ease-in-out;
+  }
+  .header-content .navigation ul li:hover a::after {
+    opacity: 1;
+    bottom: 0;
+  }
+
+  .header-content .navigation ul li + li {
+    margin-left: 1rem;
   }
   /*-------main card section-------*/
   section#cards .my-row .col:first-child .card {
